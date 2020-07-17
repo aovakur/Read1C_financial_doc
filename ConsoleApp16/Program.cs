@@ -1,4 +1,5 @@
 ﻿using Microsoft.Build.Framework;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -19,7 +20,7 @@ namespace ConsoleApp16
 
     class Program
     {
-
+        public static Logger logger = LogManager.GetCurrentClassLogger();
         static void Main()
         {
             List<File1c> newfile1c = new List<File1c>();
@@ -29,18 +30,36 @@ namespace ConsoleApp16
 
             foreach (var filepath in files)
             {
+                logger.Debug("Обнаружен файл {0}", filepath);
+            }
+
+
+            foreach (var filepath in files)
+            {
+                logger.Debug("Файл {0}", filepath);
                 var filename = Path.GetFileName(filepath);
                 var fullpath = Path.Combine(path, filepath);
-                ReadFile(fullpath, newfile1c);
-                ReadList(newfile1c);
+                bool success = ReadFile(fullpath, newfile1c);
 
+                if (success == true)
+                {
+                    MoveFile(fullpath);
+                }
+                else
+                {
+                    MoveFile(fullpath,false);
+                }
+
+                ReadList(newfile1c);
+                Console.ReadKey();
             }
         }
 
-        public static void ReadFile(string filename, List<File1c> newfile1c)
+        public static bool ReadFile(string filename, List<File1c> newfile1c)
         {
             var srcEncoding = Encoding.GetEncoding(1251);
             var dstEncoding = Encoding.UTF8;
+            bool success= false;
 
             using (StreamReader sr = new StreamReader(filename, encoding: srcEncoding))
             {
@@ -51,6 +70,7 @@ namespace ConsoleApp16
 
                 int count = System.IO.File.ReadAllLines(filename).Length;
                 int  i = 0;
+                logger.Debug("Чтение данных");
                 while (i < count)
                 {
                    string onedouble = sr.ReadLine();
@@ -64,16 +84,19 @@ namespace ConsoleApp16
 
                             if (lines[1] != null)
                             {
+                                logger.Debug($"{lines[0]} {lines[1]}");
                                 newfile1c.Add(new File1c { name = lines[0], value = lines[1] });
                                 i++;
+                                success = true;
                                 
                             }
                             if (lines[1] == null)
                             {
                                 newfile1c.Add(new File1c { name = lines[0], value = "" });
+                                logger.Debug($"{lines[0]}");
                                 i++;
+                                success = true;
                             }
-                            
 
                         }
                     }
@@ -81,12 +104,13 @@ namespace ConsoleApp16
                     else
                     {
                         i++;
+                        success = true;
                     }        
 
                 }
 
             }
-
+            return success;
         }
 
         public static bool Check(string onedouble)
@@ -108,15 +132,29 @@ namespace ConsoleApp16
         
         }
 
+        public static void MoveFile(string fullpath, bool error=false)
+        {
+            ///Перемещаем в папку архив
+            if (error == false)
+            {
+               
+            }
+
+            ///Перемещаем в папку error 
+            else
+            {
+
+            }
+
+        }
+
         public static void ReadList(List<File1c> newfile1c)
         {
 
             foreach (File1c f in newfile1c)
             {
-                Console.WriteLine($" { f.name} = {f.value}");
+               // Console.WriteLine($" { f.name} = {f.value}");
             }
-
-            Console.ReadLine();
 
         }
     }
