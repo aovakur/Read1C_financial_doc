@@ -1,0 +1,11 @@
+C:\Read1C_financial_doc\ConsoleApp16\bin\x86\Debug\NLog.config
+C:\Read1C_financial_doc\ConsoleApp16\bin\x86\Debug\ConsoleApp16.exe.config
+C:\Read1C_financial_doc\ConsoleApp16\bin\x86\Debug\ConsoleApp16.exe
+C:\Read1C_financial_doc\ConsoleApp16\bin\x86\Debug\ConsoleApp16.pdb
+C:\Read1C_financial_doc\ConsoleApp16\bin\x86\Debug\NLog.dll
+C:\Read1C_financial_doc\ConsoleApp16\bin\x86\Debug\NLog.xml
+C:\Read1C_financial_doc\ConsoleApp16\obj\x86\Debug\ConsoleApp16.csproj.CoreCompileInputs.cache
+C:\Read1C_financial_doc\ConsoleApp16\obj\x86\Debug\ConsoleApp16.csproj.CopyComplete
+C:\Read1C_financial_doc\ConsoleApp16\obj\x86\Debug\ConsoleApp16.exe
+C:\Read1C_financial_doc\ConsoleApp16\obj\x86\Debug\ConsoleApp16.pdb
+C:\Read1C_financial_doc\ConsoleApp16\obj\x86\Debug\ConsoleApp16.csprojAssemblyReference.cache

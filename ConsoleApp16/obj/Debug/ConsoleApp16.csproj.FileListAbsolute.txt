@@ -5,3 +5,14 @@ C:\Users\Andrey\source\repos\ConsoleApp16\ConsoleApp16\bin\Debug\ConsoleApp16.ex
 C:\Users\Andrey\source\repos\ConsoleApp16\ConsoleApp16\bin\Debug\ConsoleApp16.pdb
 C:\Users\Andrey\source\repos\ConsoleApp16\ConsoleApp16\obj\Debug\ConsoleApp16.exe
 C:\Users\Andrey\source\repos\ConsoleApp16\ConsoleApp16\obj\Debug\ConsoleApp16.pdb
+C:\Read1C_financial_doc\ConsoleApp16\bin\Debug\ConsoleApp16.exe.config
+C:\Read1C_financial_doc\ConsoleApp16\bin\Debug\ConsoleApp16.exe
+C:\Read1C_financial_doc\ConsoleApp16\bin\Debug\ConsoleApp16.pdb
+C:\Read1C_financial_doc\ConsoleApp16\bin\Debug\NLog.dll
+C:\Read1C_financial_doc\ConsoleApp16\bin\Debug\NLog.xml
+C:\Read1C_financial_doc\ConsoleApp16\obj\Debug\ConsoleApp16.csprojAssemblyReference.cache
+C:\Read1C_financial_doc\ConsoleApp16\obj\Debug\ConsoleApp16.csproj.CoreCompileInputs.cache
+C:\Read1C_financial_doc\ConsoleApp16\obj\Debug\ConsoleApp16.csproj.CopyComplete
+C:\Read1C_financial_doc\ConsoleApp16\obj\Debug\ConsoleApp16.exe
+C:\Read1C_financial_doc\ConsoleApp16\obj\Debug\ConsoleApp16.pdb
+C:\Read1C_financial_doc\ConsoleApp16\bin\Debug\NLog.config
